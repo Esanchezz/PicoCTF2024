@@ -1,0 +1,10 @@
+# Description
+In this challenge, to find out who is preventing the program from running. The zip file contained a bunch of different files and
+documents.
+
+# Solution
+When i opened the zip file, it had a git folder that contained a bunch of other folders. I simply just located the one that said
+logs because I assumed thats where I would find the flag. Inside the folder, there was a file labled "HEAD" which i opened in 
+notepad and inside the file, there was a lot of logs for each commit. The second log from the top log shown the flag.
+
+flag: picoCTF{@sk_th3_1nt3rn_e9957ce1}
