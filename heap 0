@@ -1,0 +1,9 @@
+# Description
+In this challenge, you had to overflow the heap that was given in the challenge. You had to connect to the instance using 
+the given powershell command:
+nc tethys.picoctf.net 61988
+
+# Solution
+The solution to this challenge required me to look into the given source code. The source code listed that the allocated memory
+for input_data was 64 so the buffer I wrote was 32 characters long. This broke the heap printing the flag
+flag: picoCTF{my_first_heap_overflow_1ad0e1a6}
