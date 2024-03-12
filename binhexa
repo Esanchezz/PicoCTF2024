@@ -1,0 +1,27 @@
+# Description
+In this challenge, I was given a command to connect to the challenge
+command: nc titan.picoctf.net 50971
+
+# Solution
+When connected, I was entered into the Binary Challenge where I was tasked to performt the operations that the challenge was giving
+me for the current question.
+
+Binary Number 1: 10101000
+Binary Number 2: 10111011
+
+In question 1, I was tasked to '*' multiply the two binary numbers and give the expected binary result.
+result 1: 0111101010111000
+In question 2, I was tasked to '+' add the two binary numbers
+result 2: 0101100011
+In question 3, I was tasked to '<<' shift the first binary number by 1 bit
+result 3: 101010000
+In question 4, I was tasked with '&' It returns a 1 in each bit position where both bits are 1, and 0 otherwise.
+result 4: 10101000
+In question 5, I was tasked with '>>' shift the second binary number by 1 bit
+result 5: 1011101
+In question 6, I was tasked with '|' It compares corresponding bits of two operands. It returns a 1 in each bit position where at least one of the bits is 1. 
+result 6: 10111011
+
+Finally it asked for the hexadecimal of the last operation: BB
+
+flag: picoCTF{b1tw^3se_0p3eR@tI0n_su33essFuL_6ab1ad84}
