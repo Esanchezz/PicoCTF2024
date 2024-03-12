@@ -1,0 +1,18 @@
+# Description
+In this challenge, you are prompted with a url that literally gives you the flag but it's in javascript code. The purpose for this challenge is to teach the participant that there are ways that your search engine can run js code in browser with just a little tweaking
+
+# Solution
+terminal is not needed for this task
+URL: http://titan.picoctf.net:57091/
+I made the url a bookmark and then edited the url portion with the line of code given in the url
+code:         javascript:(function() {
+            var encryptedFlag = "àÒÆÞ¦È¬ëÙ£ÖÓÚåÛÑ¢ÕÓ¨ÍÕÄ¦í";
+            var key = "picoctf";
+            var decryptedFlag = "";
+            for (var i = 0; i < encryptedFlag.length; i++) {
+                decryptedFlag += String.fromCharCode((encryptedFlag.charCodeAt(i) - key.charCodeAt(i % key.length) + 256) % 256);
+            }
+            alert(decryptedFlag);
+        })();
+clicking the newly edited book mark gives the flag
+flag: picoCTF{p@g3_turn3r_18d2fa20}
