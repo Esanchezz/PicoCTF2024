@@ -1,0 +1,8 @@
+# Description
+In this challenge you are given a file with a png in it that's a qr code.
+
+# Solution
+This one was really simple, all i did was download the file and open the png and let my phone scan the qr code.
+Once the code was scanned it opened my web browser that had the url as the flag
+
+flag: picoCTF{p33k_@_b00_b5ce2572}
