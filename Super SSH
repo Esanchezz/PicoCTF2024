@@ -1,0 +1,13 @@
+# Description
+In this challenge, participants were tasked with using ssh to connect to picoctf's hostname with conditions of using the provided port and password.
+Hostname: titan.picoctf.net
+Port:     60572
+username: ctf-player
+password: 1ad5be0d
+
+# Solution
+''' ssh -p 60572 ctf-player@titan.picoctf.net '''
+then you were prompted with accepting the fingerprint with ''' yes '''
+finally you had the give the provided password ''' 1ad5be0d '''
+
+Flag: 
