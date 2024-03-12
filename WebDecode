@@ -1,0 +1,20 @@
+# Description
+This one is kind of funny actually because of the webpage we are given to inspect.
+We are told to use web inspect on the given webpage that has two other pages that are on it in order to find the flag.
+
+# Solution
+URL: http://titan.picoctf.net:60527/index.html
+We are given this url. It shows an image of a guy in glasses smiling and text saying "Ha!!!!!! You looking for a flag?
+Keep Navigating
+
+Haaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+
+Keepppppppppppppp Searchinggggggggggggggggggg"
+I inspected the page's html code to find anything useful but on the home page, there was no flag and nothing in the element that was useful. So i inspected the next page the "about me" page.
+About me URL: http://titan.picoctf.net:60527/about.html
+The text in the url said "Try inspecting the page!! You might find it there". I inspected the element and found this in the code "notify_true="cGljb0NURnt3ZWJfc3VjYzNzc2Z1bGx5X2QzYzBkZWRfMTBmOTM3NmZ9"" which looked like base64.
+What I did was use the provided webshell from picoctf to use the following command:
+echo "cGljb0NURnt3ZWJfc3VjYzNzc2Z1bGx5X2QzYzBkZWRfMTBmOTM3NmZ9" | base64 -d
+this allowed me to decipher the string and gave me the flag
+
+flag: picoCTF{web_succ3ssfully_d3c0ded_10f9376f}
