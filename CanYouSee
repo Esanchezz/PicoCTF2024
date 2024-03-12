@@ -1,0 +1,21 @@
+# Description
+In this challenge, you are given a zip file that contains a jpg that I am supposed to investigate for the flag.
+
+# Solution
+I used the webshell provided from picoctf for this challenge. Here are the following commands I used for the file
+''' wget https://artifacts.picoctf.net/c_titan/5/unknown.zip '''
+this allowed me to download the file to my linux machine
+''' unzip unknown.zip '''
+I unzipped the file that was downloaded which then gave me the jpg file "ukn_reality.jpg"
+''' file ukn_reality.jpg '''
+This was the first command I used but it did not provide as much information that I needed.
+''' identify -verbose ukn_reality.jpg '''
+This command allowed me detailed information about the image like the dimensions, resolution, color space but it did not have
+anything that looked familiar that I thought I needed to find the flag
+''' exiftool ukn_reality.jpg '''
+This command displays detailed metadata information embedded in the jpg like such as camera settings, creation date, GPS coordinates (if available), and more.
+In the details, the attribution url caught my eye because it looked like base64 text.
+Attribution Url: cGljb0NURntNRTc0RDQ3QV9ISUREM05fNGRhYmRkY2J9Cg==
+I copied the url and decoded it in a base64 decipher and it gave me the flag
+
+flag: picoCTF{ME74D47A_HIDD3N_4dabddcb}
