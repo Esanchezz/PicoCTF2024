@@ -1,0 +1,8 @@
+# Description
+In this problem, we were given a url to find the flag from a webpage that minified
+
+# Solution
+This one was a little too simple, all I had to do was inspect the element of the web page and dug deeper in the divs until
+I found the flag
+
+flag: picoCTF{pr3tty_c0d3_ed938a7e}
