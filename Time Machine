@@ -1,0 +1,16 @@
+# Description
+In this challenge I was supposed to find the flag in the old git commits that the creator had originally committed in the file provided
+
+# Solution
+I downloaded the file to my linux webshell provided in picoctf with this command
+''' wget https://artifacts.picoctf.net/c_titan/67/challenge.zip '''
+Then I reinitialized my existing git repo with this command
+''' git init '''
+then I unzipped the file provided
+file: challenge.zip
+After all the files unzipped I added all the files in my current folder
+''' git add . '''
+then i changed my directory to the new directory titled "drop-in"
+after that I just used git log to get the flag in the logs
+
+flag: picoCTF{t1m3m@ch1n3_5cde9075}
